@@ -635,11 +635,23 @@ img {
 flex-direction: column;
 align-items: center;
 padding: 15px 45px;
-  background-color: transparent;
   background: #F1CDB3;
   border-radius: 100px;
   color: var(--color-dark-3xl);
 }
+
+.btn-secondary {
+  border: none;
+  display: flex;
+flex-direction: column;
+align-items: center;
+padding: 15px 45px;
+border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  color: var(--color-dark-3xl);
+  background-color: #fff;
+}
+
 
 /******************************
 ** Progressive & Aspect Ratio

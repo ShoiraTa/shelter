@@ -52,8 +52,8 @@
       </div>
     </header>
     <main>
-      <section class="section-container">
-        <div class="flex flex-center about-shelter">
+      <section class="bg-white">
+        <div class="section-container flex flex-center about-shelter">
           <div class="about-left col-lg-6">
             <div class="flex flex-center">
               <img src="../../assets/images/about-pets.png" alt="about-pets" />
@@ -80,25 +80,137 @@
       </section>
       <section class="section-container our-friends" id="our-friends">
         <div>
-          <div class="our-friends-wrapper">
+          <div class="d-flex flex-center flex-column">
             <div class="our-friends-title">
-              <h4>
+              <h3 class="text-center">
                 Our friends who <br />
                 are looking for a house
-              </h4>
+              </h3>
             </div>
-            <div class="our-friends-slider">
-              <button type="button" class="our-friends-arrow1"></button>
-              <div class="our-friends-whole-trio"></div>
-              <button type="button" class="our-friends-arrow2"></button>
+            <div class="slider">
+              <button type="button" class="arrow-left"></button>
+              <div class="pets-slider flex col-lg-10 flex-between"></div>
+              <button type="button" class="arrow-right"></button>
             </div>
-            <button type="button" onclick="buttonToOurFriendsPage()" class="our-friends-button">
-              Get to know the rest
-            </button>
+            <button type="button" class="btn-primary text-center my-3">Get to know the rest</button>
+          </div>
+        </div>
+      </section>
+      <section class="bg-white py-3" id="help">
+        <div class="section-container">
+          <div>
+            <h3 class="text-center">
+              How you can help <br />
+              our shelter
+            </h3>
+          </div>
+          <div class="help-row">
+            <div class="help-icon">
+              <img src="../../assets/icons/icon-pet-food.svg" alt="pet-food" />
+              <h4 class="help-img-name">Pet food</h4>
+            </div>
+            <div class="help-icon">
+              <img src="../../assets/icons/icon-transportation.svg" alt="transportation" />
+              <h4 class="help-img-name">Transportation</h4>
+            </div>
+            <div class="help-icon">
+              <img src="../../assets/icons/icon-toys.svg" alt="toys" />
+              <h4 class="help-img-name">Toys</h4>
+            </div>
+            <div class="help-icon">
+              <img src="../../assets/icons/icon-bowls-and-cups.svg" alt="bowls-and-cups" />
+              <h4 class="help-img-name">Bowls and cups</h4>
+            </div>
+            <div class="help-icon">
+              <img src="../../assets/icons/icon-shampoos.svg" alt="shampoos" />
+              <h4 class="help-img-name">Shampoos</h4>
+            </div>
+          </div>
+          <div class="help-row help-row2">
+            <div class="help-icon">
+              <img src="../../assets/icons/icon-vitamins.svg" alt="vitamins" />
+              <h4 class="help-img-name">Vitamins</h4>
+            </div>
+            <div class="help-icon">
+              <img src="../../assets/icons/icon-medicines.svg" alt="medicines" />
+              <h4 class="help-img-name">Medicines</h4>
+            </div>
+            <div class="help-icon">
+              <img src="../../assets/icons/icon-collars-leashes.svg" alt="collars-leashes" />
+              <h4 class="help-img-name">Collars / leashes</h4>
+            </div>
+            <div class="help-icon">
+              <img src="../../assets/icons/icon-sleeping-area.svg" alt="sleeping-area" />
+              <h4 class="help-img-name">Sleeping areas</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="donation bg-gray">
+        <div class="section-container">
+          <div class="donation-wrapper p-4 mt-1 mb-1 flex">
+            <div class="col-lg-6 flex">
+              <img src="../../assets/images/donation-dog.png" class="donation-img" alt="donation-dog" />
+            </div>
+            <div class="donation-text-block col-lg-5">
+              <h3>
+                You can also <br />
+                make a donation
+              </h3>
+              <h5>Name of the bank / Type of bank account</h5>
+              <form action="#">
+                <button type="button" class="donation-button donation-button-text">
+                  <img src="../../assets/icons/credit-card.svg" alt="credit-card" />
+                  <span> 8380 2880 8028 8791 7435 </span>
+                </button>
+              </form>
+              <p class="donation-text2">
+                Legal information and lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a ipsum at
+                libero sagittis dignissim sed ac diam. Praesent ultrices maximus tortor et vulputate. Interdum et
+                malesuada fames ac ante ipsum primis in faucibus.
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </main>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-block footer-block1">
+            <h6>For questions and suggestions</h6>
+            <div class="footer-contact">
+              <a href="mailto:email@shelter.com"><img src="../../assets/icons/icon-email.svg" alt="icon-email" /></a>
+              <a href="mailto:email@shelter.com" class="footer-text">email@shelter.com</a>
+            </div>
+            <div class="footer-contact">
+              <a href="tel:+136745677554"><img src="../../assets/icons/icon-phone.svg" alt="phone" /></a>
+              <a href="tel:+136745677554" class="footer-text">+13 674 567 75 54</a>
+            </div>
+          </div>
+          <div class="footer-block footer-block2">
+            <h6>We are waiting for your visit</h6>
+            <div class="footer-contact footer-contact-point">
+              <a href="https://goo.gl/maps/tnH14oCpLKEokHBg7" target="_blank"
+                ><img src="../../assets/icons/icon-marker.svg" alt="icon-marker"
+              /></a>
+              <a href="https://goo.gl/maps/tnH14oCpLKEokHBg7" target="_blank" class="footer-text"
+                >1 Central Street, Boston (entrance from the store)</a
+              >
+            </div>
+            <div class="footer-contact footer-contact-point">
+              <a href="https://goo.gl/maps/tnH14oCpLKEokHBg7" target="_blank"
+                ><img src="../../assets/icons/icon-marker.svg" alt="icon-marker"
+              /></a>
+              <a href="https://goo.gl/maps/tnH14oCpLKEokHBg7" target="_blank" class="footer-text"
+                >18 South Park, London
+              </a>
+            </div>
+          </div>
+          <img src="../../assets/images/footer-puppy.png" alt="footer-puppy" class="footer-img" />
+        </div>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
