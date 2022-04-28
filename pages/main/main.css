@@ -1,0 +1,101 @@
+header{
+  background-image: url(../../assets/images/main-background.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0 2rem;
+}
+
+a{
+  color: #FAFAFA;
+  text-decoration: none;
+}
+.logo{
+  font-family: var(--family-georgia);
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 110%;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.06em;
+}
+
+.logo-span{
+font-weight: 400;
+font-size: 13px;
+line-height: 15px;
+letter-spacing: 0.1em;
+}
+
+
+nav li a{
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 160%;
+  letter-spacing: 0.5px;
+  color: var(--color-dark-s);
+}
+
+.main-right{
+  background-image: url("../../assets/images/main-puppy.png");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  width: 698px;
+  height: 728px;
+  left: calc(50% - 698px/2 + 251px);
+}
+
+.main-left{
+  color: #fff;
+}
+
+h1{
+font-family: 'Georgia';
+font-size: 44px;
+line-height: 130%;
+letter-spacing: 2px;
+font-family: georgia-web;
+}
+
+.main-p{
+  font-family: 'Arial';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 160%;
+color: var(--color-dark-s);
+}
+
+/* About shelter */
+.about-shelter{
+  background-color: #fff;
+  margin: 4rem 0;
+}
+
+.about-text-block {
+	display: flex;
+	flex-direction: column;
+  width: 70%;
+}
+
+h3 {
+	font-family: 'Georgia';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 35px;
+	line-height: 128%;
+	letter-spacing: 0.06em;
+	color: var(--color-dark-l);
+	margin-bottom: 23px;
+}
+
+.about-add-text {
+	font-family: 'Arial';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 160%;
+	color: var(--color-dark-xl);
+	margin-bottom: 6px;
+}

@@ -5,10 +5,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link href="http://fonts.cdnfonts.com/css/georgia" rel="stylesheet" />
+
     <title>Shelter</title>
   </head>
   <body>
-    <header><nav>header</nav></header>
+    <header>
+      <div class="section-container pt-1">
+        <div class="flex flex-between">
+          <div class="logo-container flex flex-column">
+            <a href="./index.html" class="logo">Cozy House</a>
+            <span class="mt-05 text-white logo-span">Shelter for pets in Boston</span>
+          </div>
+          <nav class="flex flex-between">
+            <ul>
+              <li><a href="/">About the shelter</a></li>
+            </ul>
+            <ul>
+              <li><a href="../pets/pets.html">Our pets</a></li>
+            </ul>
+            <ul>
+              <li><a href="../help/help.html">Help the shelter</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Contacts</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="flex flex-between mt-3">
+          <div class="main-left flex center-vertically col-lg-5 pb-4">
+            <div>
+              <h1>
+                Not only people <br />
+                need a house
+              </h1>
+              <p class="main-p mt-1">
+                We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she
+                will love you more than anybody else in the world, you will see!
+              </p>
+              <button type="button" class="btn-primary my-3">Make a friend</button>
+            </div>
+          </div>
+          <div class="main-right mr-4 col-lg-6"></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section-container">
+        <div class="flex flex-center about-shelter">
+          <div class="about-left col-lg-6">
+            <div class="flex flex-center">
+              <img src="../../assets/images/about-pets.png" alt="about-pets" />
+            </div>
+          </div>
+          <div class="about-right col-lg-6">
+            <div class="about-text-block">
+              <h3>About the shelter <br />“Cozy House”</h3>
+              <p class="about-add-text">
+                Currently we have 121 dogs and 342 cats on our hands and statistics show that only 20% of them will find
+                a family. The others will continue to live with us and will be waiting for a lucky chance to become
+                dearly loved.
+              </p>
+              <br />
+              <p class="about-add-text">
+                We feed our wards with the best food and make sure that they do not get sick, feel comfortable
+                (including psychologically) and well. We are supported by 87 volunteers and 28 employees of various
+                skill levels. About 12% of the animals are taken by the shelter staff. Taking care of the animals, they
+                become attached to the pets and would hardly ever leave them alone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-container our-friends" id="our-friends">
+        <div>
+          <div class="our-friends-wrapper">
+            <div class="our-friends-title">
+              <h4>
+                Our friends who <br />
+                are looking for a house
+              </h4>
+            </div>
+            <div class="our-friends-slider">
+              <button type="button" class="our-friends-arrow1"></button>
+              <div class="our-friends-whole-trio"></div>
+              <button type="button" class="our-friends-arrow2"></button>
+            </div>
+            <button type="button" onclick="buttonToOurFriendsPage()" class="our-friends-button">
+              Get to know the rest
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
