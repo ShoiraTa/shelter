@@ -88,7 +88,7 @@ color: var(--color-dark-s);
 
 h3 {
 	font-family: 'Georgia';
-	font-style: normal;
+
 	font-weight: 400;
 	font-size: 35px;
 	line-height: 128%;
@@ -99,7 +99,7 @@ h3 {
 
 .about-add-text {
 	font-family: 'Arial';
-	font-style: normal;
+
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 160%;
@@ -159,7 +159,6 @@ h3 {
 
 .pet-name{
   font-family: 'Georgia';
-font-style: normal;
 font-weight: 400;
 font-size: 20px;
 line-height: 23px;
@@ -170,7 +169,6 @@ main{
 
 h3{
   font-family: 'Georgia';
-font-style: normal;
 font-weight: 400;
 font-size: 35px;
 line-height: 130%;
@@ -246,4 +244,28 @@ letter-spacing: 0.06em;
 
 .donation-img{
   height: 300px;
+}
+
+footer{
+  background: url(../../assets/images/footer-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer h3{
+  color: #fff;
+}
+
+footer a{
+  color: var(--color-primary);
+  font-family: 'Georgia';
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+letter-spacing: 0.06em;
+}
+
+.footer-icon{
+  height: 37px;
 }
