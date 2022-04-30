@@ -1,17 +1,4 @@
-function buttonToFriends() {
-  window.location.hash = 'pet';
-}
-
-function buttonToFriendsPage() {
-  window.open('https://rolling-scopes-school.github.io/yuliyashu-JSFE2022Q1/shelter/pages/pets/index.html', '_blank');
-}
-
-function inAdditionButton() {
-  window.open('#', '_blank');
-}
-
-// SLIDER MAIN
-const sliderPets = [
+const petsArr = [
   {
     name: 'Katrine',
     img: '../../assets/images/pets-katrine.png',
@@ -77,7 +64,7 @@ const sliderPets = [
 const slider = document.querySelector('.pets-slider');
 let lastIndex;
 
-// slider create
+// slider
 function createSlide(z) {
   let sliderItemI = 'sliderItem' + z;
   sliderItemI = document.createElement('div'); // create element
@@ -87,12 +74,12 @@ function createSlide(z) {
   const sliderImg = document.createElement('img');
   sliderItemI.append(sliderImg);
   sliderImg.classList.add('pet-img');
-  sliderImg.src = sliderPets[z].img;
+  sliderImg.src = petsArr[z].img;
 
   const sliderName = document.createElement('h4');
   sliderItemI.append(sliderName);
   sliderName.classList.add('pet-name');
-  sliderName.textContent = sliderPets[z].name;
+  sliderName.textContent = petsArr[z].name;
 
   const sliderButton = document.createElement('button');
   sliderItemI.append(sliderButton);
@@ -125,72 +112,3 @@ function createAdaptiveSlider() {
 }
 
 createAdaptiveSlider();
-
-// slider change
-
-const goLeft = document.querySelector('.arrow-left');
-const goRight = document.querySelector('.arrow-right');
-
-goLeft.addEventListener('click', createAdaptiveNewSliderLeft);
-goRight.addEventListener('click', createAdaptiveNewSliderRight);
-
-// slider change RIGHT
-let yRight;
-function createNewSliderRight(x) {
-  yRight = lastIndex;
-  for (let i = 0; i <= x; i++) {
-    yRight++;
-    if (yRight === sliderPets.length) yRight = 0;
-    createSlide(yRight);
-
-    popupClickEvent();
-  }
-}
-
-function createAdaptiveNewSliderRight() {
-  if (window.screen.availWidth >= 1280) {
-    slider.innerHTML = '';
-    createNewSliderRight(2);
-  }
-  if (window.screen.availWidth < 1280 && window.screen.availWidth >= 768) {
-    slider.innerHTML = '';
-    createNewSliderRight(1);
-  }
-  if (window.screen.availWidth < 768) {
-    slider.innerHTML = '';
-    createNewSliderRight(0);
-  }
-}
-
-//  slider change LEFT
-let yLeft;
-function createNewSliderLeft(x) {
-  yLeft = lastIndex - 2 * (x + 1);
-  for (let i = 0; i <= x; i++) {
-    yLeft++;
-    if (yLeft == -1) yLeft = sliderPets.length - 1;
-    if (yLeft == -2) yLeft = sliderPets.length - 2;
-    if (yLeft == -3) yLeft = sliderPets.length - 3;
-    if (yLeft == -4) yLeft = sliderPets.length - 4;
-    if (yLeft == -5) yLeft = sliderPets.length - 5;
-    if (yLeft == sliderPets.length) yLeft = 0;
-
-    createSlide(yLeft);
-    popupClickEvent();
-  }
-}
-
-function createAdaptiveNewSliderLeft() {
-  if (window.screen.availWidth >= 1280) {
-    slider.innerHTML = '';
-    createNewSliderLeft(2);
-  }
-  if (window.screen.availWidth < 1280 && window.screen.availWidth >= 768) {
-    slider.innerHTML = '';
-    createNewSliderLeft(1);
-  }
-  if (window.screen.availWidth < 768) {
-    slider.innerHTML = '';
-    createNewSliderLeft(0);
-  }
-}
