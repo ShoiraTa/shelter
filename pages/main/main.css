@@ -287,3 +287,7 @@ letter-spacing: 0.06em;
   height: 37px;
   width: 40px;
 }
+
+header .section-container{
+  padding: 66px 0 0;
+}
