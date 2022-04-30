@@ -9,7 +9,7 @@
 
 ## Live demo
 
-[Follow the link](http://shoirata.github.io/shelter)
+[Follow the link](https://shoirata.github.io/shelter/pages/main/index.html)
 
 ## Preview
 
