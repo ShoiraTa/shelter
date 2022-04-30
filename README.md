@@ -1,6 +1,6 @@
 # Shelter
 
-> Boston's shelter web page to see pets and adopt them !
+> Boston's shelter web page to see pets and adopt them!
 
 ## Built With
 
