@@ -26,15 +26,15 @@
               <li><a href="../pets/pets.html">Our pets</a></li>
             </ul>
             <ul>
-              <li><a href="../help/help.html">Help the shelter</a></li>
+              <li><a href="#help">Help the shelter</a></li>
             </ul>
             <ul>
-              <li><a href="#">Contacts</a></li>
+              <li><a href="#contacts">Contacts</a></li>
             </ul>
           </nav>
         </div>
-        <div class="flex flex-between mt-3">
-          <div class="main-left flex center-vertically col-lg-5 pb-4">
+        <div class="flex flex-between mt-3 flex-xs-column flex-sm-row">
+          <div class="main-left flex center-vertically col-sm-5 pr-2 col-xs-10 pb-4">
             <div>
               <h1>
                 Not only people <br />
@@ -44,22 +44,22 @@
                 We offer to give a chance to a little and nice puppy with an extremely wide and open heart. He or she
                 will love you more than anybody else in the world, you will see!
               </p>
-              <button type="button" class="btn-primary my-3">Make a friend</button>
+              <button type="button" class="btn-primary my-3"><a href="#our-friends">Make a friend</a></button>
             </div>
           </div>
-          <div class="main-right mr-4 col-lg-6"></div>
+          <div class="main-right col-sm-7 col-sm-7"></div>
         </div>
       </div>
     </header>
     <main>
       <section class="bg-white">
         <div class="section-container flex flex-center about-shelter">
-          <div class="about-left col-lg-6">
+          <div class="about-left col-sm-6">
             <div class="flex flex-center">
               <img src="../../assets/images/about-pets.png" alt="about-pets" />
             </div>
           </div>
-          <div class="about-right col-lg-6">
+          <div class="about-right col-sm-6">
             <div class="about-text-block">
               <h3>About the shelter <br />“Cozy House”</h3>
               <p class="about-add-text">
@@ -88,19 +88,21 @@
               </h3>
             </div>
             <div class="slider">
-              <button type="button" class="arrow-left"></button>
-              <div class="pets-slider flex col-lg-10 flex-between"></div>
-              <button type="button" class="arrow-right"></button>
+              <button type="button" class="arrow-btn arrow-left"></button>
+              <div class="pets-slider flex col-sm-9 flex-between"></div>
+              <button type="button" class="arrow-btn arrow-right"></button>
             </div>
-            <button type="button" class="btn-primary text-center my-3">Get to know the rest</button>
+            <button type="button" class="btn-primary text-center">
+              <a href="../pets/pets.html">Get to know the rest</a>
+            </button>
           </div>
         </div>
       </section>
-      <section class="bg-white py-3" id="help">
+      <section class="bg-white help-container" id="help">
         <div class="section-container">
           <div>
             <h3 class="text-center">
-              How you can help <br />
+              How you can help<br />
               our shelter
             </h3>
           </div>
@@ -146,13 +148,13 @@
           </div>
         </div>
       </section>
-      <section class="donation bg-gray">
+      <section class="donation bg-gray" id="addition">
         <div class="section-container">
           <div class="donation-wrapper p-4 mt-1 mb-1 flex">
-            <div class="col-lg-6 flex">
+            <div class="col-sm-6 flex flex-end">
               <img src="../../assets/images/donation-dog.png" class="donation-img" alt="donation-dog" />
             </div>
-            <div class="donation-text-block col-lg-5">
+            <div class="donation-text-block col-sm-4" id="donation-button">
               <h3>
                 You can also <br />
                 make a donation
@@ -161,7 +163,7 @@
               <form action="#">
                 <button type="button" class="donation-button donation-button-text">
                   <img src="../../assets/icons/credit-card.svg" alt="credit-card" />
-                  <span> 8380 2880 8028 8791 7435 </span>
+                  <a href="#donation-button"> 8380 2880 8028 8791 7435 </a></span>
                 </button>
               </form>
               <p class="donation-text2">
@@ -174,10 +176,10 @@
         </div>
       </section>
     </main>
-    <footer class="footer" id="footer">
-      <div class="section-container pt-3">
+    <footer class="footer" id="contacts">
+      <div class="section-container">
         <div class="flex flex-between center-vertically">
-          <div class="col-lg-3">
+          <div class="col-sm-4 pb-2">
             <h3 class="text-white">For questions and suggestions</h3>
             <div class="flex center-vertically my-1">
               <a href="mailto:email@shelter.com"
@@ -192,21 +194,24 @@
               <a href="tel:+136745677554" class="footer-text">+13 674 567 75 54</a>
             </div>
           </div>
-          <div class="col-lg-3">
+          <div class="col-sm-4 pb-2">
             <h3 class="text-white">We are waiting for your visit</h3>
             <div class="flex center-vertically my-1">
-              <a href="https://goo.gl/maps/tnH14oCpLKEokHBg7" target="_blank"
-                ><img src="../../assets/icons/icon-marker.svg" alt="icon-marker" class="mr-1 footer-icon"
+              <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank"
+                ><img
+                  src="../../assets/icons/icon-marker.svg"
+                  alt="icon-marker"
+                  class="mr-1 footer-icon footer-icon-bigger"
               /></a>
-              <a href="https://goo.gl/maps/tnH14oCpLKEokHBg7" target="_blank" class="footer-text pl-1"
+              <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank" class="footer-text pl-1"
                 >1 Central Street, Boston (entrance from the store)</a
               >
             </div>
             <div class="flex center-vertically my-1">
-              <a href="https://goo.gl/maps/tnH14oCpLKEokHBg7" target="_blank"
+              <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank"
                 ><img src="../../assets/icons/icon-marker.svg" alt="icon-marker" class="mr-1 footer-icon"
               /></a>
-              <a href="https://goo.gl/maps/tnH14oCpLKEokHBg7" target="_blank" class="footer-text"
+              <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank" class="footer-text"
                 >18 South Park, London
               </a>
             </div>

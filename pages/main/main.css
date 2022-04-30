@@ -6,6 +6,10 @@ header{
   padding: 0 2rem;
 }
 
+h3{
+  margin: 0;
+}
+
 a{
   color: #FAFAFA;
   text-decoration: none;
@@ -28,6 +32,9 @@ line-height: 15px;
 letter-spacing: 0.1em;
 }
 
+nav ul:first-child li{
+  border-bottom: 3px solid #F1CDB3 ;
+}
 
 nav li a{
   font-weight: 300;
@@ -41,7 +48,6 @@ nav li a{
   background-image: url("../../assets/images/main-puppy.png");
   background-repeat: no-repeat;
   background-size: cover; 
-  width: 698px;
   height: 700px;
   left: calc(50% - 698px/2 + 251px);
 }
@@ -77,7 +83,7 @@ color: var(--color-dark-s);
 /* About shelter */
 .about-shelter{
   background-color: #fff;
-  padding: 4rem 0;
+  padding: 94px 0 114px 0;
 }
 
 .about-text-block {
@@ -111,9 +117,13 @@ h3 {
   display: flex;
 }
 
-.our-friends{
+.help-container, .our-friends{
   background-color: #F6F6F6;
-  padding: 2rem 0 1rem;
+  padding: 80px 0 100px;
+}
+
+.donation-wrapper{
+  padding: 80px 0 100px;
 }
 
 .arrow-right{
@@ -148,13 +158,15 @@ h3 {
   display: flex;
   align-items: center;
   width: 100%;
+  justify-content: center;
+  margin: 55px 0 60px 0;
 }
 .pet{
   display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #fafafa;
-    padding: 1rem 1rem 2rem 1rem;
+    padding: 1rem 0 2rem 0;
 }
 
 .pet-name{
@@ -186,7 +198,7 @@ color: #545454
 
 
 .help-row{
-  width: 85%;
+  width: 90%;
   display: flex;
   justify-content: space-around;
   margin: 3rem auto;
@@ -194,6 +206,7 @@ color: #545454
 
 .help-row2{
   width: 74%;
+  margin: 3rem auto 0;
 }
 
 .help-icon{
@@ -232,7 +245,7 @@ align-items: center;
 justify-content: space-around;
 }
 
-.donation-button span{
+.donation-button a{
   font-weight: 400;
 font-size: 20px;
 line-height: 115%;
@@ -243,7 +256,7 @@ letter-spacing: 0.06em;
 }
 
 .donation-img{
-  height: 300px;
+  height: 261px;
 }
 
 footer{
@@ -251,6 +264,7 @@ footer{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 56px 40px 0;
 }
 
 footer h3{
@@ -265,7 +279,11 @@ font-size: 20px;
 line-height: 115%;
 letter-spacing: 0.06em;
 }
-
 .footer-icon{
   height: 37px;
+  width: 40px;
+}
+.footer-icon-bigger{
+  height: 37px;
+  width: 40px;
 }

@@ -254,7 +254,7 @@ body{
 }
 
 .pr-2 {
-  padding-right: 2rem;
+  padding-right: 2rem!important;
 }
 
 .pr-3 {
@@ -508,6 +508,10 @@ body{
   list-style: none !important;
 }
 
+.self-center{
+  align-self: center
+}
+
 .flex {
   display: flex;
 }
@@ -519,6 +523,14 @@ body{
 
 .flex-column {
   flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-end{
+  justify-content: end;
 }
 
 .flex-between {
@@ -582,12 +594,16 @@ img {
   .pt-sm-3 {
     padding-top: 3rem;
   }
-
-  .flex-xs-column {
-    flex-direction: column;
+  .flex-sm-row {
+    flex-direction: row;
   }
-}
 
+}
+@media only screen and (max-width: 768px) {
+.flex-xs-column {
+  flex-direction: column;
+}
+}
 @media only screen and (min-width: 62em) {
   .max-half-lg {
     max-width: 50%;
@@ -635,24 +651,39 @@ img {
 .btn-primary {
   border: none;
   display: flex;
-flex-direction: column;
-align-items: center;
-padding: 15px 45px;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 45px;
   background: #F1CDB3;
   border-radius: 100px;
+  cursor: pointer;
+  transition:  0.1s;
+}
+.btn-primary a{
   color: var(--color-dark-3xl);
 }
 
 .btn-secondary {
   border: none;
   display: flex;
-flex-direction: column;
-align-items: center;
-padding: 15px 45px;
-border: 2px solid #F1CDB3;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 45px;
+  border: 2px solid #F1CDB3;
   border-radius: 100px;
   color: var(--color-dark-3xl);
   background-color: #fff;
+  cursor: pointer;
+  transition:  0.2s;
+}
+
+ .btn-primary:hover, .donation-button:hover{
+  background-color: #FDDCC4;
+}
+
+.btn-secondary:hover, .arrow-btn:hover{
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
 }
 
 
@@ -1097,7 +1128,7 @@ border: 2px solid #F1CDB3;
 }
 
 /* 768px == 48em */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 769px) {
   .order-only-xs-revesre {
     flex-direction: row;
   }
@@ -1178,6 +1209,12 @@ border: 2px solid #F1CDB3;
     -ms-flex-preferred-size: 41.667%;
     flex-basis: 41.667%;
     max-width: 41.667%;
+  }
+
+  .col-sm-55 {
+    -ms-flex-preferred-size: 45.667%;
+    flex-basis: 45.667%;
+    max-width: 45.667%;
   }
 
   .col-sm-6 {
@@ -1637,6 +1674,13 @@ border: 2px solid #F1CDB3;
     flex-basis: 41.667%;
     max-width: 41.667%;
   }
+
+  .col-lg-55 {
+    -ms-flex-preferred-size: 45.667%;
+    flex-basis: 45.667%;
+    max-width: 45.667%;
+  }
+
 
   .col-lg-6 {
     -ms-flex-preferred-size: 50%;
