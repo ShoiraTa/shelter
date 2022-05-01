@@ -6,6 +6,10 @@ header{
   padding: 0 2rem;
 }
 
+h3{
+  margin: 0;
+}
+
 a{
   color: #FAFAFA;
   text-decoration: none;
@@ -28,6 +32,9 @@ line-height: 15px;
 letter-spacing: 0.1em;
 }
 
+nav ul:first-child li{
+  border-bottom: 3px solid #F1CDB3 ;
+}
 
 nav li a{
   font-weight: 300;
@@ -41,8 +48,7 @@ nav li a{
   background-image: url("../../assets/images/main-puppy.png");
   background-repeat: no-repeat;
   background-size: cover; 
-  width: 698px;
-  height: 728px;
+  height: 700px;
   left: calc(50% - 698px/2 + 251px);
 }
 
@@ -58,9 +64,16 @@ letter-spacing: 2px;
 font-family: georgia-web;
 }
 
+h4{
+  font-family: 'Georgia';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  color: #545454;
+}
+
 .main-p{
-  font-family: 'Arial';
-font-style: normal;
+font-family: 'Arial';
 font-weight: 400;
 font-size: 15px;
 line-height: 160%;
@@ -70,7 +83,7 @@ color: var(--color-dark-s);
 /* About shelter */
 .about-shelter{
   background-color: #fff;
-  margin: 4rem 0;
+  padding: 94px 0 114px 0;
 }
 
 .about-text-block {
@@ -81,7 +94,7 @@ color: var(--color-dark-s);
 
 h3 {
 	font-family: 'Georgia';
-	font-style: normal;
+
 	font-weight: 400;
 	font-size: 35px;
 	line-height: 128%;
@@ -92,10 +105,188 @@ h3 {
 
 .about-add-text {
 	font-family: 'Arial';
-	font-style: normal;
+
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 160%;
 	color: var(--color-dark-xl);
 	margin-bottom: 6px;
+}
+
+.pets-slider{
+  display: flex;
+}
+
+.help-container, .our-friends{
+  background-color: #F6F6F6;
+  padding: 80px 0 100px;
+}
+
+.donation-wrapper{
+  padding: 80px 0 100px;
+}
+
+.arrow-right{
+  width: 60px;
+  height: 52px;
+  margin-left: 53px;
+  border: 2px solid var(--color-primary);
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: url(../../assets/icons/Arrow\ right.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 27px 0;
+  cursor: pointer;
+}
+
+.arrow-left{
+  width: 62px;
+  height: 52px;
+  margin-right: 53px;
+  border: 2px solid var(--color-primary);
+  box-sizing: border-box;
+  border-radius: 100px;
+  background: url(../../assets/icons/Arrow\ left.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 27px 0;
+  cursor: pointer;
+}
+
+.slider{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 55px 0 60px 0;
+}
+.pet{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 1rem 0 2rem 0;
+}
+
+.pet-name{
+  font-family: 'Georgia';
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+}
+main{
+  background-color: #F6F6F6;
+}
+
+h3{
+  font-family: 'Georgia';
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: #545454
+}
+
+.bg-white{
+  background-color: #fff;
+}
+
+.bg-gray{
+  background-color: #F6F6F6;
+}
+
+
+.help-row{
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem auto;
+}
+
+.help-row2{
+  width: 74%;
+  margin: 3rem auto 0;
+}
+
+.help-icon{
+  width: 100px;
+  text-align: center;
+}
+/* Donations */
+
+h5{
+  font-family: 'Georgia';
+
+  color: var(--color-dark-l);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 110%;
+}
+
+.donation-text2{
+  font-family: 'Arial';
+font-style: italic;
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+color: #B2B2B2;
+}
+
+.donation-button{
+  background: #F1CDB3;
+border-radius: 9px;
+width: 349px;
+height: 43px;
+padding: 10px 15px;
+border: none;
+display: flex;
+align-items: center;
+justify-content: space-around;
+}
+
+.donation-button{
+  font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+font-family: 'Georgia';
+color: #545454;
+letter-spacing: 0.06em;
+}
+
+.donation-img{
+  height: 261px;
+}
+
+footer{
+  background: url(../../assets/images/footer-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 56px 40px 0;
+}
+
+footer h3{
+  color: #fff;
+}
+
+footer a{
+  color: var(--color-primary);
+  font-family: 'Georgia';
+font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+letter-spacing: 0.06em;
+}
+.footer-icon{
+  height: 37px;
+  width: 40px;
+}
+.footer-icon-bigger{
+  height: 37px;
+  width: 40px;
+}
+
+header .section-container{
+  padding: 66px 0 0;
 }

@@ -16,7 +16,6 @@ body{
   margin: 0;
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-
 }
 
 .section-container{
@@ -29,12 +28,21 @@ body{
 /**********************
 ** Typography 
 **********************/
-
+button{
+  cursor: pointer;
+}
 .primary-headline,
 .secondary-headline {
   display: block;
   font-family:  var(--family-georgia);
 }
+
+
+
+nav a:hover{
+  color: #FAFAFA;
+}
+
 
 .primary-headline {
   font-size: 3.5rem;
@@ -42,7 +50,6 @@ body{
   line-height: 2.875rem;
   letter-spacing: 0.1px;
   margin: 1.25rem 0 1.75rem !important;
-  font-family: "Founders Grotesk X-Condensed Bold";
 }
 
 .primary-headline-mobile {
@@ -50,148 +57,12 @@ body{
   font-weight: 700;
   line-height: 2.375rem;
   margin: 1rem 0 !important;
-  font-family: "Founders Grotesk X-Condensed Bold";
 }
 
 .secondary-headline {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.188rem;
-  font-family: "Founders Grotesk Medium";
-}
-
-.secondary-headline--1_1 {
-  font-size: 1.12rem;
-  font-weight: 500;
-  line-height: 1.375rem;
-  font-family: "Founders Grotesk Medium";
-}
-
-.secondary-headline--1_5 {
-  font-size: 1.5rem;
-  font-weight: 500;
-  line-height: 1.8rem;
-  font-family: "Founders Grotesk Medium";
-}
-
-.secondary-headline--1_85 {
-  font-size: 1.875rem;
-  font-weight: 500;
-  line-height: 2.15rem;
-  font-family: "Founders Grotesk Medium";
-}
-
-.secondary-headline--1_85-sm {
-  font-size: 1.875rem;
-  font-weight: 500;
-  line-height: 2.25rem;
-  font-family: "Founders Grotesk Medium";
-}
-
-.secondary-headline.light {
-  font-weight: 400;
-  font-family: "Founders Grotesk Regular";
-}
-
-.secondary-headline.medium {
-  font-size: 1.25rem;
-  line-height: 1.5rem;
-}
-
-.secondary-headline.large {
-  font-size: 1.35rem;
-  line-height: 1.688rem;
-  margin-top: 0.25rem;
-  margin-bottom: 1.5rem;
-}
-
-.secondary-headline.xlg {
-  font-size: 1.5rem; /* 24px */
-  line-height: 1.813rem;
-  margin-top: 0.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.secondary-headline.xxlg {
-  font-size: 1.875rem; /* 30px */
-  line-height: 2.25rem;
-  margin-top: 0.35rem;
-  margin-bottom: 1.6rem;
-}
-
-.secondary-headline.huge {
-  font-size: 2.8rem; /* 30px */
-  line-height: 2.9rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1.8rem;
-}
-
-.tertiary-headline {
-  font-size: 1.25rem; /* 20px */
-  font-weight: 400;
-  line-height: 1.5rem; /* 24px */
-  font-family: "Founders Grotesk Regular";
-}
-
-.body-serif {
-  font-size: 1.125rem;
-  font-weight: 300;
-  line-height: 1.688rem;
-  font-family: "Plantin MT Pro Light";
-}
-
-.body-serif--regular {
-  font-size: 1.25rem; /* 20px */
-  font-weight: 300;
-  line-height: 1.688rem; /* 27px */
-  font-family: "Plantin MT Pro regular";
-}
-
-.body-serif--regular--bold {
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.688rem;
-  font-family: "Plantin MT Pro regular";
-}
-
-.body-copy {
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 1.35rem;
-  font-family: "Founders Grotesk Regular";
-}
-
-.body-copy-xs {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.18rem;
-  font-family: "Founders Grotesk Regular";
-}
-
-.body-copy-sm {
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.4rem;
-  font-family: "Founders Grotesk Regular";
-}
-
-.body-copy.lg {
-  font-size: 1.125rem;
-  font-weight: 400;
-  line-height: 1.688rem;
-  font-family: "Founders Grotesk Regular";
-}
-
-.line-height-3-7 {
-  line-height: 3.7rem;
-}
-
-.line-height-2 {
-  line-height: 2rem;
-}
-
-.letter-spacing-double {
-  letter-spacing: 2px;
 }
 
 .text-white {
@@ -254,7 +125,7 @@ body{
 }
 
 .pr-2 {
-  padding-right: 2rem;
+  padding-right: 2rem!important;
 }
 
 .pr-3 {
@@ -384,6 +255,9 @@ body{
 .mt-4 {
   margin-top: 4rem !important;
 }
+.mr-1{
+  margin-right: 1rem;
+}
 
 .mr-4{
   margin-right: 4rem;
@@ -505,6 +379,10 @@ body{
   list-style: none !important;
 }
 
+.self-center{
+  align-self: center
+}
+
 .flex {
   display: flex;
 }
@@ -516,6 +394,14 @@ body{
 
 .flex-column {
   flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-end{
+  justify-content: end;
 }
 
 .flex-between {
@@ -579,12 +465,16 @@ img {
   .pt-sm-3 {
     padding-top: 3rem;
   }
-
-  .flex-xs-column {
-    flex-direction: column;
+  .flex-sm-row {
+    flex-direction: row;
   }
-}
 
+}
+@media only screen and (max-width: 768px) {
+.flex-xs-column {
+  flex-direction: column;
+}
+}
 @media only screen and (min-width: 62em) {
   .max-half-lg {
     max-width: 50%;
@@ -632,14 +522,41 @@ img {
 .btn-primary {
   border: none;
   display: flex;
-flex-direction: column;
-align-items: center;
-padding: 15px 45px;
-  background-color: transparent;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 45px;
   background: #F1CDB3;
   border-radius: 100px;
+  cursor: pointer;
+  transition:  0.1s;
   color: var(--color-dark-3xl);
+  letter-spacing: 0.06em;
 }
+
+.btn-secondary {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px 45px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  color: var(--color-dark-3xl);
+  background-color: #fff;
+  cursor: pointer;
+  transition:  0.2s;
+  letter-spacing: 0.06em;
+}
+
+ .btn-primary:hover, .donation-button:hover{
+  background-color: #FDDCC4;
+}
+
+.btn-secondary:hover, .arrow-btn:hover{
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+
 
 /******************************
 ** Progressive & Aspect Ratio
@@ -1082,7 +999,7 @@ padding: 15px 45px;
 }
 
 /* 768px == 48em */
-@media only screen and (min-width: 48em) {
+@media only screen and (min-width: 769px) {
   .order-only-xs-revesre {
     flex-direction: row;
   }
@@ -1163,6 +1080,12 @@ padding: 15px 45px;
     -ms-flex-preferred-size: 41.667%;
     flex-basis: 41.667%;
     max-width: 41.667%;
+  }
+
+  .col-sm-55 {
+    -ms-flex-preferred-size: 45.667%;
+    flex-basis: 45.667%;
+    max-width: 45.667%;
   }
 
   .col-sm-6 {
@@ -1622,6 +1545,13 @@ padding: 15px 45px;
     flex-basis: 41.667%;
     max-width: 41.667%;
   }
+
+  .col-lg-55 {
+    -ms-flex-preferred-size: 45.667%;
+    flex-basis: 45.667%;
+    max-width: 45.667%;
+  }
+
 
   .col-lg-6 {
     -ms-flex-preferred-size: 50%;
