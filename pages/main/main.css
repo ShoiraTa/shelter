@@ -233,16 +233,21 @@ line-height: 18px;
 color: #B2B2B2;
 }
 
+.button-wrapper{
+  margin-top: 62px;
+}
+
 .donation-button{
   background: #F1CDB3;
 border-radius: 9px;
 width: 349px;
 height: 43px;
-padding: 10px 15px;
+padding: 5px 15px;
 border: none;
 display: flex;
 align-items: center;
 justify-content: space-around;
+margin-bottom: 20px;
 }
 
 .donation-button{
