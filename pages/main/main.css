@@ -136,7 +136,7 @@ h3 {
   background: url(../../assets/icons/Arrow\ right.svg);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 0px;
+  padding: 27px 0;
   cursor: pointer;
 }
 
@@ -150,7 +150,7 @@ h3 {
   background: url(../../assets/icons/Arrow\ left.svg);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 0px;
+  padding: 27px 0;
   cursor: pointer;
 }
 
@@ -245,14 +245,13 @@ align-items: center;
 justify-content: space-around;
 }
 
-.donation-button a{
+.donation-button{
   font-weight: 400;
 font-size: 20px;
 line-height: 115%;
 font-family: 'Georgia';
 color: #545454;
 letter-spacing: 0.06em;
-
 }
 
 .donation-img{
