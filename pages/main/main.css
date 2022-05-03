@@ -166,7 +166,13 @@ h3 {
     flex-direction: column;
     align-items: center;
     background-color: #fafafa;
-    padding: 1rem 0 2rem 0;
+    transition: 0.1s;
+    height: 435px;
+  cursor: pointer;
+}
+
+.pet:hover{
+  background-color: #fff;
 }
 
 .pet-name{
