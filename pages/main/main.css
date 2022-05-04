@@ -179,6 +179,12 @@ h3 {
   background-color: #fff;
 }
 
+.pet:hover .btn-secondary{
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+  
+}
+
 .pet-name{
   font-family: 'Georgia';
 font-weight: 400;

@@ -550,7 +550,7 @@ img {
   background-color: #FDDCC4;
 }
 
-.btn-secondary:hover, .arrow-btn:hover{
+ .arrow-btn:hover{
   background-color: #FDDCC4;
   border: 2px solid #FDDCC4;
 }
