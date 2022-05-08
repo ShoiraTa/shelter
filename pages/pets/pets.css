@@ -291,8 +291,8 @@ footer{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 26px 37px 0;
-  height: 350px;
+  padding: 15px 37px 0;
+  height: 325px;
 }
 
 footer h3{
@@ -321,3 +321,7 @@ h3 {
   color: #545454;
 }
 
+.footer-img{
+margin-top: 10px;
+  width: 305px;
+}
