@@ -5,6 +5,10 @@ header{
   background-size: cover;
   padding: 0 2rem;
 }
+html{
+  overflow-x: hidden;
+}
+
 
 .highligted{
   color: #FAFAFA;

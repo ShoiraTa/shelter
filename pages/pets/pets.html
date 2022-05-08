@@ -4,12 +4,163 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="pets.css" />
-    <title>Shelter</title>
+    <title>Cozy House</title>
+    <link rel="stylesheet" href="./pets.css" />
+    <link rel="stylesheet" href="./../main/style.css" />
   </head>
   <body>
-    <header><nav>Pets here</nav></header>
-    <h1>Pets page is coming...</h1>
-    <script src="pets.js"></script>
+    <header class="header">
+      <div class="section-container-pets">
+        <div class="header-wrapper">
+          <div class="logo-header">
+            <a href="https://shoirata.github.io/shelter/pages/main/index.html" class="logo">
+              Cozy House
+              <p class="logo-span">Shelter for pets in Boston</p>
+            </a>
+          </div>
+          <div class="nav-links">
+            <a href="https://shoirata.github.io/shelter/pages/main/index.html" class="nav-header-link" target="_blank"
+              >About the shelter</a
+            >
+            <a
+              href="https://rolling-scopes-school.github.io/yuliyashu-JSFE2022Q1/shelter/pages/pets/index.html"
+              class="nav-header-link-active"
+              >Our pets</a
+            >
+            <a href="https://shoirata.github.io/shelter/pages/main/index.html#help" class="nav-header-link"
+              >Help the shelter</a
+            >
+            <a href="#footer" class="nav-header-link">Contacts</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section-container-pets">
+        <div class="slider-wrapper">
+          <div class="our-friends-title">
+            <h4>
+              Our friends who <br />
+              are looking for a house
+            </h4>
+          </div>
+          <div class="slider">
+            <div class="pets-slider flex col-sm-12 flex-between">
+              <div class="pet">
+                <img class="pet-img" src="../../assets/images/pets-katrine.png" />
+                <h4 class="pet-name">Katrine</h4>
+                <button class="pet-click btn-secondary">Learn more</button>
+              </div>
+              <div class="pet">
+                <img class="pet-img" src="../../assets/images/pets-jennifer.png" />
+                <h4 class="pet-name">Jennifer</h4>
+                <button class="pet-click btn-secondary">Learn more</button>
+              </div>
+              <div class="pet">
+                <img class="pet-img" src="../../assets/images/pets-woody.png" />
+                <h4 class="pet-name">Woody</h4>
+                <button class="pet-click btn-secondary">Learn more</button>
+              </div>
+              <div class="pet">
+                <img class="pet-img" src="../../assets/images/pets-katrine-dog.png" />
+                <h4 class="pet-name">Sophia</h4>
+                <button class="pet-click btn-secondary">Learn more</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="slider">
+            <div class="pets-slider flex col-sm-12 flex-between">
+              <div class="pet">
+                <img class="pet-img" src="../../assets/images/pets-timmy.png" />
+                <h4 class="pet-name">Timmy</h4>
+                <button class="pet-click btn-secondary">Learn more</button>
+              </div>
+              <div class="pet">
+                <img class="pet-img" src="../../assets/images/pets-charly.png" />
+                <h4 class="pet-name">Charlie</h4>
+                <button class="pet-click btn-secondary">Learn more</button>
+              </div>
+              <div class="pet">
+                <img class="pet-img" src="../../assets/images/pets-scarlett.png" />
+                <h4 class="pet-name">Scarlett</h4>
+                <button class="pet-click btn-secondary">Learn more</button>
+              </div>
+              <div class="pet">
+                <img class="pet-img" src="../../assets/images/pets-katrine-cat.png" />
+                <h4 class="pet-name">Fredie</h4>
+                <button class="pet-click btn-secondary">Learn more</button>
+              </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="pagination-btn">
+              <a href="#"><img src="../../assets/images/button_paginator_inactivePrevPrev.png" alt="" /> </a>
+            </div>
+            <div class="pagination-btn">
+              <a href="#"><img src="../../assets/images/button_paginator_inactivePrev.png" alt="" /> </a>
+            </div>
+            <div class="pagination-btn">
+              <a href="#"><div class="pagination-btn-active">1</div></a>
+            </div>
+            <div class="pagination-btn">
+              <a href="#"><img src="../../assets/images/button_paginatorNextNext.png" alt="" /> </a>
+            </div>
+            <div class="pagination-btn">
+              <a href="#"><img src="../../assets/images/button_paginatorNext.png" alt="" /> </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="contacts">
+      <div class="section-container-pets-footer">
+        <div class="flex flex-between center-vertically">
+          <div class="col-sm-4">
+            <h3 class="text-white">
+              For questions <br />
+              and suggestions
+            </h3>
+            <div class="flex center-vertically mt-2">
+              <a href="mailto:email@shelter.com"
+                ><img src="../../assets/icons/icon-email.svg" class="footer-icon mr-1 footer-icon" alt="icon-email"
+              /></a>
+              <a href="mailto:email@shelter.com" class="footer-text">email@shelter.com</a>
+            </div>
+            <div class="flex center-vertically mt-2">
+              <a href="tel:+136745677554"
+                ><img src="../../assets/icons/icon-phone.svg" alt="phone" class="mr-1 footer-icon"
+              /></a>
+              <a href="tel:+136745677554" class="footer-text">+13 674 567 75 54</a>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <h3 class="text-white">We are waiting <br />for your visit</h3>
+            <div class="flex center-vertically mt-2">
+              <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank"
+                ><img
+                  src="../../assets/icons/icon-marker.svg"
+                  alt="icon-marker"
+                  class="mr-1 footer-icon footer-icon-bigger"
+              /></a>
+              <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank" class="footer-text pl-1"
+                >1 Central Street, Boston (entrance from the store)</a
+              >
+            </div>
+            <div class="flex center-vertically mt-2">
+              <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank"
+                ><img src="../../assets/icons/icon-marker.svg" alt="icon-marker" class="mr-1 footer-icon"
+              /></a>
+              <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank" class="footer-text"
+                >18 South Park, London
+              </a>
+            </div>
+          </div>
+          <img src="../../assets/images/footer-puppy.png" alt="footer-puppy" class="footer-img" />
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
