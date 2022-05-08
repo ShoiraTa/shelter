@@ -72,7 +72,7 @@ a {
 	max-width: 1280px;
 }
 
-.logo {
+.logo, h1 {
 	margin-bottom: 10px;
 	font-family: 'Georgia';
 	font-style: normal;
@@ -112,12 +112,12 @@ a {
 	margin-left: 36px;
 	text-decoration: none;
 	margin-bottom: 3px;
-	transition-duration: 0.5s;
+	transition-duration: 0.1s;
 }
 
 .nav-header-link:hover, .nav-header-link:focus, .nav-header-link:active {
 	color: var(--color-dark-3xl);
-	transition-duration: 0.5s;
+	transition-duration: 0.1s;
 }
 
 .nav-header-link-active {
@@ -131,6 +131,10 @@ a {
 	margin-left: 36px;
 	margin-bottom: 3px;
 	border-bottom: solid var(--color-primary) 3px
+}
+
+.nav-header-link-active:hover{
+  color: var(--color-dark-2xl);
 }
 
 
@@ -227,6 +231,21 @@ h4 {
   background-color: #FDDCC4;
   border: 2px solid #FDDCC4;
   
+}
+
+.btn-next{
+  border-radius: 100%;
+  transition: 0.2s;
+}
+
+.pagination-button{
+  padding: 0;
+    background-color: #fff;
+    border: none;
+}
+
+.btn-next:hover{
+  background-color: var(--color-primary-light);
 }
 
 .pet-img{
