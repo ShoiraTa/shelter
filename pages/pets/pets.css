@@ -55,6 +55,10 @@ a {
 	text-decoration: none;
 }
 
+.disabled{
+  cursor: default;
+}
+
 .header {
 	background-size: cover;
 	background-color: var(--color-light-xl);
