@@ -52,6 +52,9 @@ nav li a{
   color: var(--color-dark-s);
 }
 
+.main-right-container{
+  width: 100%;
+}
 .main-right{
   background-image: url("../../assets/images/main-puppy.png");
   background-repeat: no-repeat;
@@ -62,6 +65,9 @@ nav li a{
 
 .main-left{
   color: #fff;
+  display: flex;
+  align-items: center;
+  padding-bottom: 4rem;
 }
 
 h1{
@@ -88,10 +94,16 @@ line-height: 160%;
 color: var(--color-dark-s);
 }
 
+.not-only-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
 /* About shelter */
 .about-shelter{
   background-color: #fff;
-  padding: 94px 0 114px 0;
+  padding: 94px 0 100px 0;
 }
 
 .about-text-block {
@@ -135,7 +147,7 @@ h3 {
 }
 
 .arrow-right{
-  width: 60px;
+  width: 52px;
   height: 52px;
   margin-left: 53px;
   border: 2px solid var(--color-primary);
@@ -144,12 +156,12 @@ h3 {
   background: url(../../assets/icons/Arrow\ right.svg);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 27px 0;
+  padding: 24px 0;
   cursor: pointer;
 }
 
 .arrow-left{
-  width: 62px;
+  width: 52px;
   height: 52px;
   margin-right: 53px;
   border: 2px solid var(--color-primary);
@@ -158,7 +170,7 @@ h3 {
   background: url(../../assets/icons/Arrow\ left.svg);
   background-repeat: no-repeat;
   background-position: center;
-  padding: 27px 0;
+  padding: 24px 0;
   cursor: pointer;
 }
 
@@ -221,7 +233,9 @@ color: #545454
   width: 90%;
   display: flex;
   justify-content: space-around;
-  margin: 3rem auto;
+  margin: 3rem auto 0;
+  flex-wrap: wrap;
+  gap: 120px;
 }
 
 .help-row2{
@@ -314,4 +328,109 @@ letter-spacing: 0.06em;
 
 header .section-container{
   padding: 66px 0 0;
+}
+
+.col-sm-4-cus{
+  flex-basis: 33%;
+}
+
+/* Responsiveness */
+
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  nav ul{
+    padding: 0 35px 0 0;
+  }
+
+  nav  ul:last-child{
+    padding: 0;
+  }
+  nav li a{
+    font-size: 14px;
+  }
+
+  header .section-container {
+    padding: 30px 0 0;
+  } 
+
+   header .main-left{
+    margin: auto;
+    padding-right: 0!important;
+    padding-bottom: 100px;
+  }
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+  } 
+
+  .not-only-section{
+flex-direction: column ;
+  }
+  .main-left{
+    width: 460px;
+  }
+ .main-right {
+    width: 569px;
+    height: 588px;
+    background-size: contain;
+    background-image: url("../../assets/images/start-screen-puppy-tablet.png");
+  }
+.main-right-container{
+    display: flex;
+    justify-content: end;
+  }
+
+  .about-section-container {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .about-text-block{
+    width: 430px;
+    margin-bottom: 80px;
+  }
+
+  .pets-slider {
+    gap: 40px;
+}
+
+  .slider {
+    width: auto;
+  }
+
+  .arrow-left{
+    margin-right: 12px;
+  }
+
+  .arrow-right{
+    margin-left: 12px;
+  }
+  .help-row {
+    width: 630px;
+    gap: 80px;
+  }
+
+  .donation-wrapper{
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .donation-text-block{
+    width: 380px;
+    justify-content: center;
+    margin: auto;
+  }
+  .donation-dog{
+    justify-content: center;
+    margin-top: 45px;
+  }
+
+  .footer-section{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col-sm-4-cus{
+   flex-basis: 50%;
+  }
 }
