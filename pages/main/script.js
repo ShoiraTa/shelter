@@ -63,52 +63,17 @@ const petsArr = [
 
 const slider = document.querySelector('.pets-slider');
 let lastIndex;
+// Mobile menu
 
-// slider
-function createSlide(z) {
-  let sliderItemI = 'sliderItem' + z;
-  sliderItemI = document.createElement('div'); // create element
-  slider.append(sliderItemI); // add element to slider Item container
-  sliderItemI.classList.add('pet');
+const burgerBtn = document.getElementsByClassName('burger-btn');
+const mobileNav = document.getElementById('mobile-navbar');
 
-  const sliderImg = document.createElement('img');
-  sliderItemI.append(sliderImg);
-  sliderImg.classList.add('pet-img');
-  sliderImg.src = petsArr[z].img;
-
-  const sliderName = document.createElement('h4');
-  sliderItemI.append(sliderName);
-  sliderName.classList.add('pet-name');
-  sliderName.textContent = petsArr[z].name;
-
-  const sliderButton = document.createElement('button');
-  sliderItemI.append(sliderButton);
-  sliderButton.classList.add('pet-click');
-  sliderButton.classList.add('btn-secondary');
-  sliderButton.textContent = 'Learn more';
-
-  lastIndex = z;
-}
-
-function createSlider(x) {
-  for (let i = 0; i <= x; i++) {
-    createSlide(i);
-  }
-}
-
-function createAdaptiveSlider() {
-  if (window.screen.availWidth >= 1280) {
-    slider.innerHTML = '';
-    createSlider(2);
-  }
-  if (window.screen.availWidth < 1280 && window.screen.availWidth >= 768) {
-    slider.innerHTML = '';
-    createSlider(1);
-  }
-  if (window.screen.availWidth < 768) {
-    slider.innerHTML = '';
-    createSlider(0);
-  }
-}
-
-createAdaptiveSlider();
+Array.from(burgerBtn).forEach((btn) => {
+  btn.addEventListener('click', () => {
+    if (mobileNav.style.display === 'none') {
+      mobileNav.style.display = 'block';
+    } else {
+      mobileNav.style.display = 'none';
+    }
+  });
+});
