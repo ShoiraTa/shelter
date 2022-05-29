@@ -18,7 +18,37 @@
             <a href="./index.html" class="logo">Cozy House</a>
             <span class="mt-05 text-white logo-span">Shelter for pets in Boston</span>
           </div>
-          <nav class="flex flex-between">
+          <div class="d-xs-block burger-btn">
+            <img class="open-burger" src="../../assets/images/Burger.png" />
+          </div>
+
+          <nav class="mobile-navbar" style="display: none" id="mobile-navbar">
+            <div class="mobile-nav-header">
+              <div class="logo-container flex flex-column">
+                <a href="./index.html" class="logo">Cozy House</a>
+                <span class="mt-05 text-white logo-span">Shelter for pets in Boston</span>
+              </div>
+              <div class="d-xs-block burger-btn">
+                <img class="open-burger" src="../../assets/images/Burger (1).png" />
+              </div>
+            </div>
+
+            <ul class="mobile-nav-ul">
+              <li>
+                <a href="https://shoirata.github.io/shelter/pages/main/index.html" class="highligted"
+                  >About the shelter</a
+                >
+              </li>
+
+              <li><a href="../pets/pets.html">Our pets</a></li>
+
+              <li><a href="#help">Help the shelter</a></li>
+
+              <li><a href="#contacts">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <nav class="flex flex-between d-xs-none">
             <ul>
               <li>
                 <a href="https://shoirata.github.io/shelter/pages/main/index.html" class="highligted"
@@ -97,7 +127,23 @@
             </div>
             <div class="slider">
               <button type="button" class="arrow-btn arrow-left"></button>
-              <div class="pets-slider flex col-sm-9 flex-between"></div>
+              <div class="pets-slider flex col-sm-9 flex-between">
+                <div class="pet">
+                  <img class="pet-img" src="../../assets/images/pets-katrine.png" />
+                  <h4 class="pet-name">Katrine</h4>
+                  <button class="pet-click btn-secondary">Learn more</button>
+                </div>
+                <div class="pet d-xs-none">
+                  <img class="pet-img" src="../../assets/images/pets-jennifer.png" />
+                  <h4 class="pet-name">Jennifer</h4>
+                  <button class="pet-click btn-secondary">Learn more</button>
+                </div>
+                <div class="pet d-xs-none d-md-none">
+                  <img class="pet-img" src="../../assets/images/pets-woody.png" />
+                  <h4 class="pet-name">Woody</h4>
+                  <button class="pet-click btn-secondary">Learn more</button>
+                </div>
+              </div>
               <button type="button" class="arrow-btn arrow-right"></button>
             </div>
             <a href="../pets/pets.html" class="btn-primary text-center"> Get to know the rest</a>
@@ -155,11 +201,11 @@
       </section>
       <section class="donation bg-gray" id="addition">
         <div class="section-container">
-          <div class="donation-wrapper p-4 mt-1 flex">
+          <div class="donation-wrapper p-4 flex">
             <div class="donation-dog flex flex-end">
               <img src="../../assets/images/donation-dog.png" class="donation-img" alt="donation-dog" />
             </div>
-            <div class="donation-text-block col-sm-4" id="donation-button">
+            <div class="donation-text-block" id="donation-button">
               <h3>
                 You can also <br />
                 make a donation
@@ -184,7 +230,7 @@
     <footer class="footer" id="contacts">
       <div class="section-container">
         <div class="footer-section flex flex-between center-vertically">
-          <div class="col-sm-4-cus pb-2 col-xs-6">
+          <div class="col-sm-4-cus pb-2">
             <h3 class="text-white">
               For questions <br />
               and suggestions
@@ -202,7 +248,7 @@
               <a href="tel:+136745677554" class="footer-text">+13 674 567 75 54</a>
             </div>
           </div>
-          <div class="col-sm-4-cus pb-2 col-xs-6">
+          <div class="col-sm-4-cus pb-2">
             <h3 class="text-white">We are waiting <br />for your visit</h3>
             <div class="flex center-vertically my-1">
               <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank"
@@ -212,7 +258,8 @@
                   class="mr-1 footer-icon footer-icon-bigger"
               /></a>
               <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank" class="footer-text pl-1"
-                >1 Central Street, Boston (entrance from the store)</a
+                >1 Central Street, Boston<br />
+                (entrance from the store)</a
               >
             </div>
             <div class="flex center-vertically my-1">
