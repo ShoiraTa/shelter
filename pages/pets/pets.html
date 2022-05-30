@@ -12,13 +12,42 @@
     <header class="header">
       <div class="section-container-pets">
         <div class="header-wrapper">
-          <div class="logo-header">
+          <div class="logo-header" id="desktop-header1">
             <a href="https://shoirata.github.io/shelter/pages/main/index.html" class="logo">
               <h1>Cozy House</h1>
               <p class="logo-span">Shelter for pets in Boston</p>
             </a>
           </div>
-          <nav class="nav-links">
+
+          <div class="d-xs-block burger-btn" id="desktop-header2">
+            <img class="open-burger" src="../../assets/images/Burger-pets.png" />
+          </div>
+
+          <nav class="mobile-navbar" style="display: none" id="mobile-navbar">
+            <div class="mobile-nav-header">
+              <div class="logo-container flex flex-column">
+                <a href="./index.html" class="logo">Cozy House</a>
+                <span class="mt-05 text-white logo-span">Shelter for pets in Boston</span>
+              </div>
+              <div class="d-xs-block burger-btn">
+                <img class="open-burger" src="../../assets/images/Burger (1).png" />
+              </div>
+            </div>
+
+            <ul class="mobile-nav-ul">
+              <li>
+                <a href="https://shoirata.github.io/shelter/pages/main/index.html">About the shelter</a>
+              </li>
+
+              <li><a href="../pets/pets.html" class="highligtedmob">Our pets</a></li>
+
+              <li><a href="#help">Help the shelter</a></li>
+
+              <li><a href="#contacts">Contacts</a></li>
+            </ul>
+          </nav>
+
+          <nav class="nav-links d-xs-none">
             <a href="https://shoirata.github.io/shelter/pages/main/index.html" class="nav-header-link" target="_blank"
               >About the shelter</a
             >
@@ -124,10 +153,7 @@
       <div class="section-container">
         <div class="footer-section flex flex-between center-vertically">
           <div class="col-sm-4-cus pb-2">
-            <h3 class="text-white">
-              For questions <br />
-              and suggestions
-            </h3>
+            <h3 class="text-white suggestions">For questions and suggestions</h3>
             <div class="flex center-vertically my-1">
               <a href="mailto:email@shelter.com"
                 ><img src="../../assets/icons/icon-email.svg" class="footer-icon mr-1 footer-icon" alt="icon-email"
@@ -142,7 +168,7 @@
             </div>
           </div>
           <div class="col-sm-4-cus pb-2">
-            <h3 class="text-white">We are waiting <br />for your visit</h3>
+            <h3 class="text-white waiting">We are waiting for your visit</h3>
             <div class="flex center-vertically my-1">
               <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank"
                 ><img
@@ -151,7 +177,8 @@
                   class="mr-1 footer-icon footer-icon-bigger"
               /></a>
               <a href="https://goo.gl/maps/H4ieomEoDnFLEcrQ9" target="_blank" class="footer-text pl-1"
-                >1 Central Street, Boston (entrance from the store)</a
+                >1 Central Street, Boston<br />
+                (entrance from the store)</a
               >
             </div>
             <div class="flex center-vertically my-1">
@@ -169,6 +196,6 @@
         </div>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./pets.js"></script>
   </body>
 </html>

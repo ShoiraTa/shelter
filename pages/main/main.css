@@ -40,9 +40,7 @@ line-height: 15px;
 letter-spacing: 0.1em;
 }
 
-nav ul:first-child li{
-  border-bottom: 3px solid #F1CDB3 ;
-}
+
 
 nav li a{
   font-weight: 300;
@@ -92,6 +90,7 @@ font-weight: 400;
 font-size: 15px;
 line-height: 160%;
 color: var(--color-dark-s);
+width: 80%;
 }
 
 .not-only-section {
@@ -344,7 +343,7 @@ header .section-container{
 }
 
 .d-xs-block{
-  display: none;
+  display: none!important;
 }
 
 .d-xs-none{
@@ -371,7 +370,7 @@ header .section-container{
 .mobile-nav-ul{
   padding: 0;
   text-align: center;
-  margin-top: 158px;
+  margin-top: 100px;
 }
 
 .mobile-nav-ul li{
@@ -391,10 +390,31 @@ header .section-container{
   border-bottom: 3px solid #F1CDB3;
 
 }
+
+.highligtedmob{
+  color: #FAFAFA!important;
+  border-bottom: 3px solid #F1CDB3;
+}
+
+.waiting{
+  width: 70%;
+}
+
+.suggestions{
+  width: 70%;
+}
 /* Responsiveness */
 
 
 @media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .about-shelter, .help-container, .our-friends, .donation-wrapper{
+    padding: 80px 0
+  }
+
+  .main-p{
+
+    width: 100%;
+    }
   nav ul{
     padding: 0 35px 0 0;
   }
@@ -494,16 +514,38 @@ header .section-container{
   .d-md-none{
     display: none;
   }
+
+  .mobile-navbar{
+    display: none!important;
+  }
+
+  .waiting{
+    width: 80%;
+  }
+
+  .suggestions{
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 767px) {
+  .main-p{
+    width: 100%;
+  }
 
+  .mr-2{
+    margin-right: 2rem;
+  }
+
+  .main-left{
+    margin-bottom: 3rem;
+  }
   .d-xs-none{
     display: none;
   }
 
   .d-xs-block{
-    display: block;
+    display: block!important;
   }
 
   .not-only-section{
@@ -515,7 +557,8 @@ header .section-container{
     background-size: contain;
     background-image: url("../../assets/images/start-screen-puppy-tablet.png");
   }
-.main-right-container{
+
+  .main-right-container{
     display: flex;
     justify-content: end;
   }
@@ -538,11 +581,11 @@ header .section-container{
   }
 
   .arrow-left{
-    margin-right: 125px;
+    margin-right: 135px;
   }
 
   .arrow-right{
-    margin-left: 125px;
+    margin-left: 135px;
   }
 
   .our-friends{
@@ -550,8 +593,23 @@ header .section-container{
   }
 
   .help-row{
-    justify-content: space-evenly;
-    gap: 60px
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .help-icon{
+    justify-self: center;
+  }
+
+  footer{
+    padding: 30px 0 0;
+  }
+
+  footer .pl-1 {
+    padding-left: 0;
   }
 
   .slider{
@@ -586,6 +644,7 @@ header .section-container{
   .footer-section{
     flex-wrap: wrap;
     justify-content: center;
+    text-align: center;
   }
 
   .col-sm-4-cus{
@@ -594,10 +653,6 @@ header .section-container{
 
   .d-md-none{
     display: none;
-  }
-
-  .footer-section{
-    text-align: center;
   }
 
   .center-vertically{
@@ -609,8 +664,8 @@ header .section-container{
 
   h3{
     font-weight: 400;
-font-size: 25px;
-text-align: center;
+    font-size: 25px;
+    text-align: center;
   }
 
   .button-wrapper, h1, .main-p{
@@ -651,5 +706,14 @@ text-align: center;
   .donation-wrapper{
     padding: 42px 20px;
     margin:0;
+  }
+
+  .suggestions{
+    margin: auto;
+  }
+
+  .waiting{
+    width: 80%;
+    margin: auto;
   }
 }
