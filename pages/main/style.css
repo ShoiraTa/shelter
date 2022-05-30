@@ -553,6 +553,7 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 17px;
+  margin: 0 auto;
 }
 
  .btn-primary:hover, .donation-button:hover{

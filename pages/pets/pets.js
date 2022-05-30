@@ -31,7 +31,6 @@ window.addEventListener('resize', () => {
     mobileNav.style.display = 'none';
     desktopheader1.style.display = 'block';
     openBurger.style.display = 'block';
-    par.style.margin = '0';
     body.style.position = 'inherit';
   }
 });
