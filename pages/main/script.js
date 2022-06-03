@@ -141,8 +141,6 @@ const slider = document.querySelector('.pets-slider');
 let lastIndex = [3, 4, 5, 6, 7].sort(() => 0.5 - Math.random()).slice(0, 1)[0];
 let firstIndex = lastIndex - 2;
 
-console.log(lastIndex);
-
 function createSlide(z) {
   let sliderItemI = 'sliderItem' + z;
 
@@ -186,7 +184,8 @@ const responsiveSlider = (firstIndex, lastIndex) => {
   }
   if (screen.width < 768) {
     slider.innerHTML = '';
-    createSlider(firstIndex, 0);
+    console.log(firstIndex);
+    createSlider(firstIndex, lastIndex - 2);
   }
   window.addEventListener('resize', () => {
     if (screen.width >= 1280) {
