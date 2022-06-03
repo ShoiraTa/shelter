@@ -168,14 +168,12 @@ function createSlide(z) {
 }
 
 function createSlider(firstIndex, end) {
-  console.log(firstIndex, end);
   for (let i = firstIndex; i <= end; i++) {
     createSlide(i);
   }
 }
 
 const responsiveSlider = (firstIndex, lastIndex) => {
-  console.log(firstIndex, lastIndex);
   if (screen.width >= 1280) {
     slider.innerHTML = '';
     createSlider(firstIndex, lastIndex);
@@ -231,12 +229,27 @@ arrowRight.addEventListener('click', () => {
   }
   if (screen.width < 1280 && screen.width >= 768) {
     firstIndex = randomLast - 1;
-
     createSlider(firstIndex, lastIndex);
   }
   if (screen.width < 768) {
     firstIndex = randomLast - 0;
-    console.log(firstIndex, lastIndex);
+    createSlider(firstIndex, lastIndex);
+  }
+});
+
+arrowLeft.addEventListener('click', () => {
+  slider.innerHTML = '';
+  lastIndex = lastIndex - 2 <= 0 ? 7 : lastIndex - 1;
+  if (screen.width >= 1280) {
+    firstIndex = lastIndex - 2;
+    createSlider(firstIndex, lastIndex);
+  }
+  if (screen.width < 1280 && screen.width >= 768) {
+    firstIndex = lastIndex - 1;
+    createSlider(firstIndex, lastIndex);
+  }
+  if (screen.width < 768) {
+    firstIndex = lastIndex - 0;
     createSlider(firstIndex, lastIndex);
   }
 });
