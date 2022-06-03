@@ -138,8 +138,10 @@ const pets = [
 ];
 
 const slider = document.querySelector('.pets-slider');
-let lastIndex = pets.length - 6;
-let firstIndex = 0;
+let lastIndex = [3, 4, 5, 6, 7].sort(() => 0.5 - Math.random()).slice(0, 1)[0];
+let firstIndex = lastIndex - 2;
+
+console.log(lastIndex);
 
 function createSlide(z) {
   let sliderItemI = 'sliderItem' + z;

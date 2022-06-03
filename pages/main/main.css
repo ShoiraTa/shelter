@@ -240,6 +240,10 @@ margin-bottom: 7px;
   
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .pet-name{
   font-family: 'Georgia';
 font-weight: 400;
