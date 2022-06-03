@@ -518,6 +518,105 @@ header .section-container{
   margin-right: 10px;
 }
 
+.popup-modal{
+  position: relative;
+}
+
+
+.popup-modal{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(41, 41, 41, 0.6);
+}
+.popup-modal-inner{
+  width: 900px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  gap: 30px;
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+
+.popup-img{
+  width: 500px;
+  height:500px ;
+}
+
+.popup-img-image{
+  width: 100%;
+  height: 100%;
+}
+
+.popup-content{
+  width: 360px;
+  padding: 50px 20px 50px 0;
+}
+
+.popup-title{
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+.popup-breed{
+  font-weight: 400;
+font-size: 20px;
+line-height: 115%;
+letter-spacing: 0.06em;
+margin: 10px 0 0 0;
+}
+.popup-content p {
+font-weight: 400;
+font-size: 15px;
+line-height: 110%;
+letter-spacing: 0.06em;
+margin: 40px 0;
+}
+
+.popup-content ul {
+  padding: 0;
+}
+
+.popup-content ul li {
+  margin-bottom: 11px;
+}
+
+.popup-content ul li::before {
+  content: "\2022"; 
+  color: #F1CDB3;
+  font-weight: bold; 
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em; 
+}
+
+#close-popup-btn-container{
+  position: absolute;
+  right: -50px;
+  top: -50px;
+  width: 52px;
+  height: 52px;
+  border-radius: 100%;
+  border: 1px solid #F1CDB3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.1s;
+}
+
+
+.hovering{
+  background-color: #F1CDB3;
+  cursor: pointer;
+}
+
 /* Footer */
 
 
@@ -689,6 +788,27 @@ header .section-container{
     margin-top: 30px;
     margin-right: 60px;
   }
+
+  .popup-modal-inner {
+    width: 630px;
+    height: 350px;
+}
+.popup-img{
+  height: 350px;
+  width: 350px;
+}
+
+.popup-content{
+  padding: 10px 0;
+}
+
+.popup-content p{
+  font-size: 13px;
+  margin: 20px 0;
+}
+.popup-content ul li {
+  margin-bottom: 6px;
+}
 }
 
 @media only screen and (max-width: 767px) {
@@ -1005,5 +1125,37 @@ header .section-container{
 
  .mobile-nav-ul{
   padding: 0 0 0 25px;
+}
+.popup-img{
+  display: none;
+}
+
+.popup-modal-inner{
+  width: 240px;
+  padding: 10px;
+  height: 441px;
+}
+
+.popup-content {
+  width: 360px;
+  padding: 10px 0;
+  
+}
+.popup-content ul {
+  padding: 0 15px;
+}
+.popup-content p{
+  font-size: 13px;
+  margin: 20px 0;
+}
+.popup-content ul li{
+  font-size: 15px;
+}
+.popup-content{
+  width: 240px;
+}
+
+.popup-content ul li::before{
+  width: 0.7em;
 }
 }

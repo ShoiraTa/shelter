@@ -146,7 +146,9 @@ function createSlide(z) {
 
   sliderItemI = document.createElement('div');
   slider.append(sliderItemI);
+
   sliderItemI.classList.add('pet');
+  sliderItemI.setAttribute('data', z);
 
   const sliderImg = document.createElement('img');
   sliderItemI.append(sliderImg);
@@ -253,4 +255,70 @@ arrowLeft.addEventListener('click', () => {
     firstIndex = lastIndex - 0;
     createSlider(firstIndex, lastIndex);
   }
+});
+
+// Popup
+const closePopup = () => {
+  const buttonContainer = document.getElementById('close-popup-btn-container');
+  const modal = document.getElementById('popup-modal');
+  const innerModal = document.getElementById('popup-modal-inner');
+  const closeBtn = document.createElement('img');
+  closeBtn.src = '../../assets/images/Vector.png';
+  buttonContainer.append(closeBtn);
+
+  let button = document.getElementById('close-popup-btn-container');
+  window.onclick = function (event) {
+    if (event.target == modal || event.target == button) {
+      modal.style.display = 'none';
+      button.innerHTML = '';
+      document.getElementById('popup-content').innerHTML = '';
+      document.getElementById('popup-img').innerHTML = '';
+      document.body.style.overflow = 'inherit';
+      document.body.style.height = '100%';
+    }
+  };
+  window.onmousemove = function (event) {
+    if (event.target == modal || event.target == button) {
+      button.classList.add('hovering');
+      modal.style.cursor = 'pointer';
+    }
+    if (event.target != modal && event.target != button) {
+      button.classList.remove('hovering');
+      modal.style.cursor = 'default';
+      document.body.style.height = 'auto%';
+    }
+  };
+};
+
+let allPets = document.getElementsByClassName('pet');
+[...allPets].forEach((pet) => {
+  pet.addEventListener('click', (e) => {
+    const modal = document.getElementById('popup-modal');
+
+    if (modal.style.display === 'none') {
+      modal.style.display = 'flex';
+      closePopup();
+      document.body.style.overflow = 'hidden';
+    }
+    const index = pet.getAttribute('data');
+    imageContainer = document.getElementById('popup-img');
+    const sliderImg = document.createElement('img');
+    imageContainer.append(sliderImg);
+    sliderImg.classList.add('popup-img-image');
+    sliderImg.src = pets[index].img;
+
+    const contentPart = document.getElementById('popup-content');
+    contentPart.innerHTML = `<h1 class="popup-title">${pets[index].name}</h1>
+    <h3 class="popup-breed">${pets[index].type}-${pets[index].breed}</h3>
+    <p>
+    ${pets[index].description}
+    </p>
+   
+    <ul>
+      <li><strong>Age:</strong> ${pets[index].age}</li>
+      <li><strong>Inoculations:</strong> ${pets[index].inoculations.map((inoculation) => inoculation)}</li>
+      <li><strong>Diseases:</strong> ${pets[index].diseases.map((disease) => disease)}</li>
+      <li><strong>Parasites:</strong> ${pets[index].parasites.map((parasite) => parasite)}</li>
+    </ul>`;
+  });
 });
