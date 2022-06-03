@@ -227,6 +227,7 @@ margin-bottom: 7px;
     transition: 0.1s;
     height: 435px;
   cursor: pointer;
+  width: 270px;
 }
 
 .pet:hover{
@@ -244,7 +245,7 @@ margin-bottom: 7px;
 font-weight: 400;
 font-size: 20px;
 line-height: 23px;
-margin: 32px 0;
+margin: 30px 0;
 letter-spacing: 0.06em;
 }
 main{

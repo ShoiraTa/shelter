@@ -1,4 +1,44 @@
-const petsArr = [
+// Mobile menu
+const burgerBtn = document.getElementsByClassName('burger-btn');
+const mobileNav = document.getElementById('mobile-navbar');
+const desktopheader1 = document.getElementById('desktop-header1');
+const desktopheader2 = document.getElementById('desktop-header2');
+const openBurger = document.getElementsByClassName('open-burger')[0];
+const par = document.getElementsByClassName('main-p')[0];
+const body = document.getElementsByTagName('body')[0];
+
+Array.from(burgerBtn).forEach((btn) => {
+  btn.addEventListener('click', () => {
+    if (mobileNav.style.display === 'none') {
+      mobileNav.style.display = 'block';
+      desktopheader1.style.display = 'none';
+      openBurger.style.display = 'none';
+      par.style.margin = '0 0 0 2rem';
+      body.style.position = 'fixed';
+    } else {
+      mobileNav.style.display = 'none';
+      desktopheader1.style.display = 'block';
+      openBurger.style.display = 'block';
+      par.style.margin = '0';
+      body.style.position = 'inherit';
+    }
+  });
+});
+
+window.addEventListener('resize', () => {
+  if (screen.width > 767) {
+    mobileNav.style.display = 'none';
+    desktopheader1.style.display = 'block';
+    openBurger.style.display = 'block';
+    par.style.margin = '0';
+    body.style.position = 'inherit';
+  }
+});
+
+// Mobile menu end
+
+// Slider Show
+const pets = [
   {
     name: 'Katrine',
     img: '../../assets/images/pets-katrine.png',
@@ -48,7 +88,7 @@ const petsArr = [
     parasites: ['none'],
   },
   {
-    name: 'Nika',
+    name: 'Timmy',
     img: '../../assets/images/pets-timmy.png',
     type: 'Cat',
     breed: 'British Shorthair',
@@ -59,44 +99,144 @@ const petsArr = [
     diseases: ['kidney stones'],
     parasites: ['none'],
   },
+  {
+    name: 'Charly',
+    img: '../../assets/images/pets-charly.png',
+    type: 'Dog',
+    breed: 'Jack Russell Terrier',
+    description:
+      'This cute boy, Charly, is three years old and he likes adults and kids. He isn’t fond of many other dogs, so he might do best in a single dog home. Charly has lots of energy, and loves to run and play. We think a fenced yard would make him very happy.',
+    age: '8 years',
+    inoculations: ['bordetella bronchiseptica', 'leptospirosis'],
+    diseases: ['deafness', 'blindness'],
+    parasites: ['lice', 'fleas'],
+  },
+  {
+    name: 'Scarlett',
+    img: '../../assets/images/pets-scarlett.png',
+    type: 'Dog',
+    breed: 'Jack Russell Terrier',
+    description:
+      'Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.',
+    age: '3 months',
+    inoculations: ['parainfluenza'],
+    diseases: ['none'],
+    parasites: ['none'],
+  },
+  {
+    name: 'Freddie',
+    img: '../../assets/images/pets-freddie.png',
+    type: 'Cat',
+    breed: 'British Shorthair',
+    description:
+      'Freddie is a little shy at first, but very sweet when he warms up. He likes playing with shoe strings and bottle caps. He is quick to learn the rhythms of his human’s daily life. Freddie has bounced around a lot in his life, and is looking to find his forever home.',
+    age: '2 months',
+    inoculations: ['rabies'],
+    diseases: ['none'],
+    parasites: ['none'],
+  },
 ];
 
 const slider = document.querySelector('.pets-slider');
-let lastIndex;
-// Mobile menu
+let lastIndex = pets.length - 6;
+let firstIndex = 0;
 
-const burgerBtn = document.getElementsByClassName('burger-btn');
-const mobileNav = document.getElementById('mobile-navbar');
-const desktopheader1 = document.getElementById('desktop-header1');
-const desktopheader2 = document.getElementById('desktop-header2');
-const openBurger = document.getElementsByClassName('open-burger')[0];
-const par = document.getElementsByClassName('main-p')[0];
-const body = document.getElementsByTagName('body')[0];
+function createSlide(z) {
+  let sliderItemI = 'sliderItem' + z;
 
-Array.from(burgerBtn).forEach((btn) => {
-  btn.addEventListener('click', () => {
-    if (mobileNav.style.display === 'none') {
-      mobileNav.style.display = 'block';
-      desktopheader1.style.display = 'none';
-      openBurger.style.display = 'none';
-      par.style.margin = '0 0 0 2rem';
-      body.style.position = 'fixed';
-    } else {
-      mobileNav.style.display = 'none';
-      desktopheader1.style.display = 'block';
-      openBurger.style.display = 'block';
-      par.style.margin = '0';
-      body.style.position = 'inherit';
+  sliderItemI = document.createElement('div');
+  slider.append(sliderItemI);
+  sliderItemI.classList.add('pet');
+
+  const sliderImg = document.createElement('img');
+  sliderItemI.append(sliderImg);
+  sliderImg.classList.add('our-friends-img');
+  sliderImg.src = pets[z].img;
+
+  const sliderName = document.createElement('p');
+  sliderItemI.append(sliderName);
+  sliderName.classList.add('pet-name');
+  sliderName.textContent = pets[z].name;
+
+  const sliderButton = document.createElement('button');
+  sliderItemI.append(sliderButton);
+  sliderButton.classList.add('pet-click');
+  sliderButton.classList.add('btn-secondary');
+  sliderButton.textContent = 'Learn more';
+
+  lastIndex = z;
+}
+
+function createSlider(firstIndex, end) {
+  console.log(firstIndex, end);
+  for (let i = firstIndex; i <= end; i++) {
+    createSlide(i);
+  }
+}
+
+const responsiveSlider = (firstIndex, lastIndex) => {
+  console.log(firstIndex, lastIndex);
+  if (screen.width >= 1280) {
+    slider.innerHTML = '';
+    createSlider(firstIndex, lastIndex);
+  }
+  if (screen.width < 1280 && screen.width >= 768) {
+    slider.innerHTML = '';
+    createSlider(firstIndex, lastIndex - 1);
+  }
+  if (screen.width < 768) {
+    slider.innerHTML = '';
+    createSlider(firstIndex, 0);
+  }
+  window.addEventListener('resize', () => {
+    if (screen.width >= 1280) {
+      slider.innerHTML = '';
+      createSlider(firstIndex, lastIndex);
+    }
+
+    if (screen.width < 1280 && screen.width >= 768) {
+      slider.innerHTML = '';
+      createSlider(firstIndex, lastIndex - 1);
+    }
+    if (screen.width < 768) {
+      slider.innerHTML = '';
+      createSlider(firstIndex, lastIndex - 2);
     }
   });
-});
+};
+responsiveSlider(firstIndex, lastIndex);
 
-window.addEventListener('resize', () => {
-  if (screen.width > 767) {
-    mobileNav.style.display = 'none';
-    desktopheader1.style.display = 'block';
-    openBurger.style.display = 'block';
-    par.style.margin = '0';
-    body.style.position = 'inherit';
+// Slider functional
+
+let arrowRight = document.querySelector('.arrow-right');
+let arrowLeft = document.querySelector('.arrow-left');
+let nextIndx = null;
+
+arrowRight.addEventListener('click', () => {
+  slider.innerHTML = '';
+  let newRandomSlides = [];
+  [0, 1, 2, 3, 4, 5, 6, 7].forEach((num) => {
+    if (num !== firstIndex && num !== firstIndex + 1 && num !== lastIndex) {
+      newRandomSlides = [...newRandomSlides, num];
+    }
+  });
+
+  let randomN = newRandomSlides.sort(() => 0.5 - Math.random()).slice(0, 1)[0];
+  let randomLast = randomN <= 1 ? 2 : randomN;
+  lastIndex = randomLast;
+
+  if (screen.width >= 1280) {
+    firstIndex = randomLast - 2;
+    createSlider(firstIndex, lastIndex);
+  }
+  if (screen.width < 1280 && screen.width >= 768) {
+    firstIndex = randomLast - 1;
+
+    createSlider(firstIndex, lastIndex);
+  }
+  if (screen.width < 768) {
+    firstIndex = randomLast - 0;
+    console.log(firstIndex, lastIndex);
+    createSlider(firstIndex, lastIndex);
   }
 });
