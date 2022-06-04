@@ -1,4 +1,5 @@
-// Mobile menu
+//__________________________NAVBAR MOBILE____________________________//
+
 const burgerBtn = document.getElementsByClassName('burger-btn');
 const mobileNav = document.getElementById('mobile-navbar');
 const desktopheader1 = document.getElementById('desktop-header1');
@@ -35,7 +36,78 @@ window.addEventListener('resize', () => {
   }
 });
 
-// Mobile menu end
+//__________________________MODAL____________________________//
+
+// close Modal
+const closePopup = () => {
+  const buttonContainer = document.getElementById('close-popup-btn-container');
+  const modal = document.getElementById('popup-modal');
+  const innerModal = document.getElementById('popup-modal-inner');
+  const closeBtn = document.createElement('img');
+  closeBtn.classList.add('x-btn');
+  closeBtn.src = '../../assets/images/Vector.png';
+  buttonContainer.append(closeBtn);
+
+  let button = document.getElementById('close-popup-btn-container');
+  let button2 = document.getElementsByClassName('x-btn')[0];
+  window.onclick = function (event) {
+    if (event.target == modal || event.target == button || event.target == button2) {
+      modal.style.display = 'none';
+      button.innerHTML = '';
+      document.getElementById('popup-content').innerHTML = '';
+      document.getElementById('popup-img').innerHTML = '';
+      document.getElementsByTagName('html')[0].style.overflow = 'scroll';
+    }
+  };
+  window.onmousemove = function (event) {
+    if (event.target == modal || event.target == button || event.target == button2) {
+      button.classList.add('hovering');
+      modal.style.cursor = 'pointer';
+    }
+    if (event.target != modal && event.target != button && event.target != button2) {
+      button.classList.remove('hovering');
+      modal.style.cursor = 'default';
+    }
+  };
+};
+
+// open Modal
+const modal = () => {
+  let allPets = document.getElementsByClassName('pet');
+  [...allPets].forEach((pet) => {
+    pet.addEventListener('click', (e) => {
+      const modal = document.getElementById('popup-modal');
+
+      if (modal.style.display === 'none') {
+        modal.style.display = 'flex';
+        closePopup();
+        document.getElementsByTagName('html')[0].style.overflow = 'hidden';
+      }
+      const index = pet.getAttribute('data');
+      imageContainer = document.getElementById('popup-img');
+      const sliderImg = document.createElement('img');
+      imageContainer.append(sliderImg);
+      sliderImg.classList.add('popup-img-image');
+      sliderImg.src = pets[index].img;
+
+      const contentPart = document.getElementById('popup-content');
+      contentPart.innerHTML = `<h1 class="popup-title">${pets[index].name}</h1>
+      <h3 class="popup-breed">${pets[index].type}-${pets[index].breed}</h3>
+      <p>
+      ${pets[index].description}
+      </p>
+     
+      <ul>
+        <li><strong>Age:</strong> ${pets[index].age}</li>
+        <li><strong>Inoculations:</strong> ${pets[index].inoculations.map((inoculation) => inoculation)}</li>
+        <li><strong>Diseases:</strong> ${pets[index].diseases.map((disease) => disease)}</li>
+        <li><strong>Parasites:</strong> ${pets[index].parasites.map((parasite) => parasite)}</li>
+      </ul>`;
+    });
+  });
+};
+
+//__________________________CAROUSEL____________________________//
 
 // Slider Show
 const pets = [
@@ -141,10 +213,8 @@ const slider = document.querySelector('.pets-slider');
 let lastIndex = [3, 4, 5, 6, 7].sort(() => 0.5 - Math.random()).slice(0, 1)[0];
 let firstIndex = lastIndex - 2;
 
-function createSlide(z) {
-  let sliderItemI = 'sliderItem' + z;
-
-  sliderItemI = document.createElement('div');
+function createSingleSlide(z) {
+  let sliderItemI = document.createElement('div');
   slider.append(sliderItemI);
 
   sliderItemI.classList.add('pet');
@@ -165,13 +235,11 @@ function createSlide(z) {
   sliderButton.classList.add('pet-click');
   sliderButton.classList.add('btn-secondary');
   sliderButton.textContent = 'Learn more';
-
-  lastIndex = z;
 }
 
 function createSlider(firstIndex, end) {
   for (let i = firstIndex; i <= end; i++) {
-    createSlide(i);
+    createSingleSlide(i);
   }
 }
 
@@ -238,6 +306,7 @@ arrowRight.addEventListener('click', () => {
     firstIndex = randomLast - 0;
     createSlider(firstIndex, lastIndex);
   }
+  modal();
 });
 
 arrowLeft.addEventListener('click', () => {
@@ -255,70 +324,7 @@ arrowLeft.addEventListener('click', () => {
     firstIndex = lastIndex - 0;
     createSlider(firstIndex, lastIndex);
   }
+  modal();
 });
 
-// Popup
-const closePopup = () => {
-  const buttonContainer = document.getElementById('close-popup-btn-container');
-  const modal = document.getElementById('popup-modal');
-  const innerModal = document.getElementById('popup-modal-inner');
-  const closeBtn = document.createElement('img');
-  closeBtn.src = '../../assets/images/Vector.png';
-  buttonContainer.append(closeBtn);
-
-  let button = document.getElementById('close-popup-btn-container');
-  window.onclick = function (event) {
-    if (event.target == modal || event.target == button) {
-      modal.style.display = 'none';
-      button.innerHTML = '';
-      document.getElementById('popup-content').innerHTML = '';
-      document.getElementById('popup-img').innerHTML = '';
-      document.body.style.overflow = 'inherit';
-      document.body.style.height = '100%';
-    }
-  };
-  window.onmousemove = function (event) {
-    if (event.target == modal || event.target == button) {
-      button.classList.add('hovering');
-      modal.style.cursor = 'pointer';
-    }
-    if (event.target != modal && event.target != button) {
-      button.classList.remove('hovering');
-      modal.style.cursor = 'default';
-      document.body.style.height = 'auto%';
-    }
-  };
-};
-
-let allPets = document.getElementsByClassName('pet');
-[...allPets].forEach((pet) => {
-  pet.addEventListener('click', (e) => {
-    const modal = document.getElementById('popup-modal');
-
-    if (modal.style.display === 'none') {
-      modal.style.display = 'flex';
-      closePopup();
-      document.body.style.overflow = 'hidden';
-    }
-    const index = pet.getAttribute('data');
-    imageContainer = document.getElementById('popup-img');
-    const sliderImg = document.createElement('img');
-    imageContainer.append(sliderImg);
-    sliderImg.classList.add('popup-img-image');
-    sliderImg.src = pets[index].img;
-
-    const contentPart = document.getElementById('popup-content');
-    contentPart.innerHTML = `<h1 class="popup-title">${pets[index].name}</h1>
-    <h3 class="popup-breed">${pets[index].type}-${pets[index].breed}</h3>
-    <p>
-    ${pets[index].description}
-    </p>
-   
-    <ul>
-      <li><strong>Age:</strong> ${pets[index].age}</li>
-      <li><strong>Inoculations:</strong> ${pets[index].inoculations.map((inoculation) => inoculation)}</li>
-      <li><strong>Diseases:</strong> ${pets[index].diseases.map((disease) => disease)}</li>
-      <li><strong>Parasites:</strong> ${pets[index].parasites.map((parasite) => parasite)}</li>
-    </ul>`;
-  });
-});
+modal();

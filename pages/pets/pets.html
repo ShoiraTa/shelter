@@ -73,8 +73,8 @@
             </h4>
           </div>
           <div class="slider">
-            <div class="pets-slider flex col-md-12 flex-between">
-              <div class="pet">
+            <div class="pets-slider flex col-md-12 flex-between"id="pets-slider">
+              <!-- <div class="pet">
                 <img class="pet-img" src="../../assets/images/pets-katrine.png" />
                 <h4 class="pet-name">Katrine</h4>
                 <button class="pet-click btn-secondary">Learn more</button>
@@ -120,31 +120,39 @@
                 <button class="pet-click btn-secondary">Learn more</button>
               </div>
             </div>
+          </div> -->
+
+        </div>
+        <div class="buttons">
+          <div class="pagination-btn" >
+            <button class="pagination-button " type="button"id="always-first">
+              <<
+            </button>
           </div>
-          <div class="buttons">
-            <div class="pagination-btn">
-              <button class="pagination-button disabled" type="button" disabled>
-                <img src="../../assets/images/button_paginator_inactivePrevPrev.png" alt="" />
-              </button>
-            </div>
-            <div class="pagination-btn">
-              <button class="pagination-button disabled" type="button" disabled>
-                <img src="../../assets/images/button_paginator_inactivePrev.png" alt="" />
-              </button>
-            </div>
-            <div class="pagination-btn">
-              <button class="pagination-button" type="button"><div class="pagination-btn-active">1</div></button>
-            </div>
-            <div class="pagination-btn">
-              <button class="pagination-button" type="button">
-                <img src="../../assets/images/button_paginatorNextNext.png" class="btn-next" alt="" />
-              </button>
-            </div>
-            <div class="pagination-btn">
-              <button class="pagination-button" type="button">
-                <img src="../../assets/images/button_paginatorNext.png" class="btn-next" alt="" />
-              </button>
-            </div>
+          <div class="pagination-btn">
+            <button class="pagination-button " type="button"  id="previous-page">
+              <
+            </button>
+          </div>
+          <div class="pagination-btn">
+            <button class="pagination-button" type="button"><div class="pagination-btn-active" id="pagination-btn">1</div></button>
+          </div>
+          <div class="pagination-btn" >
+            <button class="pagination-button" type="button"id="next-page">
+              >
+            </button>
+          </div>
+          <div class="pagination-btn" >
+            <button class="pagination-button" type="button"id="always-last">
+              >>
+            </button>
+          </div>
+        </div>
+        <div class="popup-modal" id="popup-modal" style="display: none">
+          <div class="popup-modal-inner">
+            <div id="close-popup-btn-container"></div>
+            <div class="popup-img" id="popup-img"></div>
+            <div id="popup-content" class="popup-content"></div>
           </div>
         </div>
       </section>
