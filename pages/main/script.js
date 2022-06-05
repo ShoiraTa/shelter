@@ -2,33 +2,32 @@
 
 const burgerBtn = document.getElementsByClassName('burger-btn');
 const mobileNav = document.getElementById('mobile-navbar');
-const desktopheader1 = document.getElementById('desktop-header1');
-const desktopheader2 = document.getElementById('desktop-header2');
+const mobileInner = document.getElementById('mobile-inner');
 const openBurger = document.getElementsByClassName('open-burger')[0];
-const par = document.getElementsByClassName('main-p')[0];
 const body = document.getElementsByTagName('body')[0];
 
-Array.from(burgerBtn).forEach((btn) => {
-  btn.addEventListener('click', () => {
-    if (mobileNav.style.display === 'none') {
-      mobileNav.style.display = 'block';
-      desktopheader1.style.display = 'none';
-      openBurger.style.display = 'none';
-      par.style.margin = '0 0 0 2rem';
-      body.style.position = 'fixed';
-    } else {
-      mobileNav.style.display = 'none';
-      desktopheader1.style.display = 'block';
-      openBurger.style.display = 'block';
-      par.style.margin = '0';
-      body.style.position = 'inherit';
+console.log(burgerBtn);
+[...burgerBtn, mobileNav].forEach((btn) => {
+  btn.addEventListener('click', (event) => {
+    if (event.target !== mobileInner) {
+      if (!mobileNav.classList.contains('translate')) {
+        mobileNav.style.width = '100vw';
+        mobileNav.classList.add('translate');
+        openBurger.classList.add('translate-burger');
+
+        body.style.position = 'fixed';
+      } else {
+        mobileNav.classList.remove('translate');
+        openBurger.classList.remove('translate-burger');
+        mobileNav.style.width = '0';
+        body.style.position = 'inherit';
+      }
     }
   });
 });
 
 window.addEventListener('resize', () => {
   if (screen.width > 767) {
-    mobileNav.style.display = 'none';
     desktopheader1.style.display = 'block';
     openBurger.style.display = 'block';
     par.style.margin = '0';
@@ -210,7 +209,7 @@ const pets = [
 ];
 
 const slider = document.querySelector('.pets-slider');
-let lastIndex = [3, 4, 5, 6, 7].sort(() => 0.5 - Math.random()).slice(0, 1)[0];
+let lastIndex = [3, 6].sort(() => 0.5 - Math.random()).slice(0, 1)[0];
 let firstIndex = lastIndex - 2;
 
 function createSingleSlide(z) {
@@ -238,9 +237,16 @@ function createSingleSlide(z) {
 }
 
 function createSlider(firstIndex, end) {
+  let indexes = [];
+
   for (let i = firstIndex; i <= end; i++) {
-    createSingleSlide(i);
+    indexes.push(i);
   }
+  indexes
+    .sort((a, b) => 0.5 - Math.random())
+    .forEach((inx) => {
+      createSingleSlide(inx);
+    });
 }
 
 const responsiveSlider = (firstIndex, lastIndex) => {
@@ -271,6 +277,7 @@ const responsiveSlider = (firstIndex, lastIndex) => {
       slider.innerHTML = '';
       createSlider(firstIndex, lastIndex - 2);
     }
+    modal();
   });
 };
 responsiveSlider(firstIndex, lastIndex);
@@ -284,25 +291,44 @@ let nextIndx = null;
 arrowRight.addEventListener('click', () => {
   slider.innerHTML = '';
   let newRandomSlides = [];
-  [0, 1, 2, 3, 4, 5, 6, 7].forEach((num) => {
-    if (num !== firstIndex && num !== firstIndex + 1 && num !== lastIndex) {
-      newRandomSlides = [...newRandomSlides, num];
-    }
-  });
+  let randomLast;
 
-  let randomN = newRandomSlides.sort(() => 0.5 - Math.random()).slice(0, 1)[0];
-  let randomLast = randomN <= 1 ? 2 : randomN;
-  lastIndex = randomLast;
+  const setLast = (list) => {
+    let randomN = list.sort(() => 0.5 - Math.random()).slice(0, 1)[0];
+    randomLast = randomN;
+    lastIndex = randomLast;
+  };
 
   if (screen.width >= 1280) {
+    [3, 6].forEach((num) => {
+      if (num !== firstIndex && num !== firstIndex + 1 && num !== lastIndex) {
+        newRandomSlides = [...newRandomSlides, num];
+      }
+    });
+    setLast(newRandomSlides);
+
     firstIndex = randomLast - 2;
     createSlider(firstIndex, lastIndex);
   }
   if (screen.width < 1280 && screen.width >= 768) {
+    [2, 5, 7].forEach((num) => {
+      if (num !== firstIndex && num !== firstIndex + 1 && num !== lastIndex) {
+        newRandomSlides = [...newRandomSlides, num];
+      }
+    });
+    setLast(newRandomSlides);
+
     firstIndex = randomLast - 1;
     createSlider(firstIndex, lastIndex);
   }
   if (screen.width < 768) {
+    [1, 3, 5, 7].forEach((num) => {
+      if (num !== firstIndex && num !== firstIndex + 1 && num !== lastIndex) {
+        newRandomSlides = [...newRandomSlides, num];
+      }
+    });
+    setLast(newRandomSlides);
+
     firstIndex = randomLast - 0;
     createSlider(firstIndex, lastIndex);
   }

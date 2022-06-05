@@ -425,13 +425,39 @@ header .section-container{
 .mobile-navbar{
   z-index: 1;
   position: fixed;
-  background-color: #292929;
+  background-color: #2929298f;
+  overflow: scroll;
+  transition: 0.6s;
+  opacity:0;
   top: 0;
   bottom: 0;
   right: 0;
+
+}
+
+.mobile-inner{
   width: 300px;
+  float: right;
+  background-color: #292929;
   padding: 30px 10px 0;
-  overflow: scroll;
+}
+
+.translate{
+  transform: translateX(0%);
+  display: block!important;
+  opacity: 1;
+}
+
+.burger-btn {
+  z-index: 5;
+}
+
+.open-burger{
+  transition: 0.5s;
+}
+
+.translate-burger{
+  transform: rotate(90deg);
 }
 
 .mobile-nav-header{
@@ -1161,5 +1187,14 @@ margin: 40px 0;
 
 .popup-content ul li::before{
   width: 0.7em;
+}
+.popup-title{
+  text-align: center;
+}
+}
+@media only screen and (min-width: 350px) and (max-width: 760px){
+  .footer-section .center-vertically {
+    display: flex;
+    justify-content: center;
 }
 }
